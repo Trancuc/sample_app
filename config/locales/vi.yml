@@ -1,0 +1,5 @@
+vi:
+  hello: "Xin chào"
+  application:
+    english: "Tiếng Anh"
+    vietnamese: "Tiếng Việt"
