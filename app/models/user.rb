@@ -1,10 +1,11 @@
 class User < ApplicationRecord
-  VALID_EMAIL_REGEX = Settings.user.validate.VALID_EMAIL_REGEX
+  USER_PERMIT = %i(name email password password_confirmation).freeze
+
   validates :name, presence: true,
     length: {maximum: Settings.user.validate.name_max}
   validates :email, presence: true,
     length: {maximum: Settings.user.validate.email_max},
-    format: {with: VALID_EMAIL_REGEX}, uniqueness: true
+    format: {with: URI::MailTo::EMAIL_REGEXP}, uniqueness: true
   validates :password, presence: true,
     length: {minimum: Settings.user.validate.pass_min}
 
