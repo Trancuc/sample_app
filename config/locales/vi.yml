@@ -1,4 +1,8 @@
 vi:
+  global:
+    text_success: "Chao mung den voi Sample App !"
+    text_error: "Dang ky loi"
+    not_found_user: "Khong tim thay nguoi dung"
   title: "Ruby on Rails Tutorial Sample App"
   layouts:
     application:
@@ -51,3 +55,15 @@ vi:
   users:
     new:
       subtitle: "Dang ky"
+      submit: "Tao tai khoan cua toi"
+      name: "Ten"
+  shared:
+    error_messages:
+      text: "Bieu mau chua"
+      error: "loi"
+  activerecord:
+    attributes:
+      user:
+        name: "Ten"
+        password: "Mat khau"
+        password_confirmation: "Xac nhan mat khau"

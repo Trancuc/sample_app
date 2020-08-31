@@ -17,3 +17,10 @@ footer:
   path_link3: "https://news.railstutorial.org/"
 contact:
   path_link: "https://www.railstutorial.org/contac"
+user:
+  validate:
+    name_max: 50
+    email_max: 255
+    pass_min: 6
+users_helper:
+  size: 80

@@ -1,4 +1,8 @@
 en:
+  global:
+    text_success: "Welcome to the Sample App!"
+    text_error: "Signup unsuccessful!"
+    not_found_user: "Not found user"
   title: "Ruby on Rails Tutorial Sample App"
   layouts:
     application:
@@ -42,3 +46,14 @@ en:
   users:
     new:
       subtitle: "Sign up"
+      submit: "Create my account"
+  shared:
+    error_messages:
+      text: "The form contains"
+      error: "error"
+  activerecord:
+    attributes:
+      user:
+        name: "Name"
+        password: "Password"
+        password_confirmation: "Confirmation"
