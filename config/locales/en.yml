@@ -12,7 +12,13 @@ en:
     header:
       text: "Home"
       text1: "Help"
-      text2: "Log in"
+      text2: "Users"
+      text3: "Account"
+      text4: "Profile"
+      text5: "Settings"
+      text6: "Log out"
+      text7: "Log in"
+      text8: "Sample app"
   static_pages:
     home:
       subtitle: "Home"
@@ -47,6 +53,12 @@ en:
     new:
       subtitle: "Sign up"
       submit: "Create my account"
+  session:
+    new:
+      title: "Log in"
+      text1: "Log in"
+      text2: "New User ?"
+      text3: "Sign up now !"
   shared:
     error_messages:
       text: "The form contains"
