@@ -3,6 +3,7 @@ vi:
     text_success: "Chao mung den voi Sample App !"
     text_error: "Dang ky loi"
     not_found_user: "Khong tim thay nguoi dung"
+    log_in_false: "Email/ mat khau khong hop le"
   title: "Ruby on Rails Tutorial Sample App"
   layouts:
     application:
@@ -21,6 +22,12 @@ vi:
       text: "Trang chủ"
       text1: "Trợ giúp"
       text2: "Dang ky"
+      text3: "Tai khoan"
+      text4: "Thong tin tai khoan"
+      text5: "Thiet lap"
+      text6: "Dang xuat"
+      text7: "Dang nhap"
+      text8: "Sample app"
   static_pages:
     home:
       subtitle: "Trang chủ"
@@ -57,6 +64,12 @@ vi:
       subtitle: "Dang ky"
       submit: "Tao tai khoan cua toi"
       name: "Ten"
+  session:
+    new:
+      title: "Dang nhap"
+      text1: "Dang nhap"
+      text2: "Nguoi dung moi ?"
+      text3: "Dang ky ngay !"
   shared:
     error_messages:
       text: "Bieu mau chua"
