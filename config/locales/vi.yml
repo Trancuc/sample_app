@@ -1,5 +1,10 @@
 vi:
   global:
+    pass_expired: "Đặt lại mật khẩu đã hết hạn."
+    pass_reset: "Mật khẩu đã được đặt lại."
+    pass_empty: "không thể để trống"
+    email_not_found: "Không tìm thấy địa chỉ email"
+    email_send_with_pw_reset: "Email được gửi kèm theo hướng dẫn đặt lại mật khẩu"
     invalidate_activation_link: "link khong hien huu"
     acc_activated: "xac thuc tai khoan!"
     text_check_your_mail: "kiem tra mail de kich hoat tai khoan"
@@ -14,6 +19,7 @@ vi:
     user_delete: "xoa nguoi dung"
     please_login: "Dang nhap ! "
     log_in_false: "Invalid email/password combination"
+    message: "Tài khoản chưa được kích hoạt. Hãy kiểm tra email của bạn để biết liên kết kích hoạt."
   title: "Ruby on Rails Tutorial Sample App"
   layouts:
     application:
@@ -91,6 +97,7 @@ vi:
       new_user: "Nguoi dung moi ?"
       signup: "Dang ky ngay !"
       pass: "Mat khau "
+      forgot_pass: "(quen mat khau)"
       remem: "Nho toi o thiet bi nay"
   shared:
     error_messages:
@@ -102,6 +109,22 @@ vi:
       hi: "xin chao"
       activate: "Kich hoat"
       welcome: "Chao mung den voi Sample App! Click vao link duoi day de kich hoat tai khoan:"
+    password_reset:
+      title: "Đặt lại mật khẩu"
+      reset_your_pass: "Để đặt lại mật khẩu của bạn, hãy nhấp vào liên kết bên dưới:"
+      time_expire: "Liên kết này sẽ hết hạn sau hai giờ."
+      not_request: "Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."
+      to_reset: "Để đặt lại mật khẩu của bạn, hãy nhấp vào liên kết bên dưới"
+  password_resets:
+    edit:
+      title: "Đặt lại mật khẩu"
+      pass: "Mat khau"
+      confirm: "Xac nhan mat khau"
+      update_password: "Cap nhat mat khau"
+    new:
+      title: "Quen mat khau"
+      submit: "gui di"
+      click: "Dat lai mat khau"
   mailer:
     account_activation: "kich hoat tai khoan"
   activerecord:

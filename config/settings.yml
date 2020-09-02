@@ -27,6 +27,7 @@ user:
     name_max: 50
     email_max: 255
     pass_min: 6
+  time_expired: 2
 users_helper:
   size: 80
 users_controller:
