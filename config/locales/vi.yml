@@ -1,5 +1,10 @@
 vi:
   global:
+    invalidate_activation_link: "link khong hien huu"
+    acc_activated: "xac thuc tai khoan!"
+    text_check_your_mail: "kiem tra mail de kich hoat tai khoan"
+    text_acc_not_activated: " tai khoan khong duoc xac thuc "
+    text_check_email: "hay check mail de xac thuc tai khoan "
     text_success: "Chao mung den voi Sample App !"
     text_error: "Dang ky loi"
     not_found_user: "Khong tim thay nguoi dung"
@@ -91,6 +96,14 @@ vi:
     error_messages:
       text: "Bieu mau chua"
       error: "loi"
+  user_mailer:
+    account_activation:
+      title: "Sample app"
+      hi: "xin chao"
+      activate: "Kich hoat"
+      welcome: "Chao mung den voi Sample App! Click vao link duoi day de kich hoat tai khoan:"
+  mailer:
+    account_activation: "kich hoat tai khoan"
   activerecord:
     attributes:
       user:

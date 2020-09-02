@@ -19,6 +19,9 @@ edit:
   ava: "https://gravatar.com/emails"
 contact:
   path_link: "https://www.railstutorial.org/contac"
+users:
+  user:
+    size_image: 50
 user:
   validate:
     name_max: 50

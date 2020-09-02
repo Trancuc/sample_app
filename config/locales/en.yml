@@ -1,5 +1,10 @@
 en:
   global:
+    invalidate_activation_link: "Invalid activation link"
+    acc_activated: "Account activated!"
+    text_check_your_mail: "Check your email for the activation link."
+    text_acc_not_activated: "Account not activated. "
+    text_check_email: "Please check your email to activate your account."
     text_success: "Welcome to the Sample App!"
     text_error: "Signup unsuccessful!"
     not_found_user: "Not found user"
@@ -88,6 +93,14 @@ en:
     error_messages:
       text: "The form contains"
       error: "error"
+  user_mailer:
+    account_activation:
+      title: "Sample app"
+      hi: "Hi"
+      activate: "Activate"
+      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+  mailer:
+    account_activation: "Account activation"
   activerecord:
     attributes:
       user:
