@@ -1,5 +1,8 @@
 en:
   global:
+    micro_delete: "Micropost deleted"
+    micro_delete_error: " Micropost delete error"
+    micro_create: "Micropost created!"
     pass_expired: "Password reset has expired."
     pass_reset: "Password has been reset."
     pass_empty: "can't be empty"
@@ -19,10 +22,24 @@ en:
     please_login: "Please log in "
     log_in_false: "Invalid email/password combination"
     message: "Account not activated.Chec your email for the activation link."
-  title: "Ruby on Rails Tutorial Sample App"
+  mailers:
+    user_mailer:
+      account_activation: "Account Activation"
+      password_reset: "Password Reset"
+  helpers:
+    application_helper:
+      title: "Ruby on Rails Tutorial Sample App"
+  views:
+    title: "Ruby on Rails Tutorial Sample App"
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
   layouts:
     application:
-      title: "Ruby on Rails Tutorial Sample App"
+      title: "Ruby on Rails Tutorial Sample App VN"
       en: "English"
       vi: "Vietnamese"
     footer:
@@ -45,6 +62,7 @@ en:
       sample_app: "Sample app"
   static_pages:
     home:
+      micro_feed: "Micropost Feed"
       subtitle: "Home"
       sign_up: "Sign up now!"
       tutorial: "Ruby on Rails Tutorial"
@@ -87,6 +105,8 @@ en:
       save: "save"
     index:
       subtitle: "All user"
+    show:
+       micro: "Microposts"
   sessions:
     new:
       title: "Log in"
@@ -100,6 +120,19 @@ en:
     error_messages:
       text: "The form contains"
       error: "error"
+    micropost_form:
+      compose_micropost: "Compose new micropost..."
+      post: "Post"
+      alert: "Maximum file size is 5MB. Please choose a smaller file."
+    user_info:
+      view_pro: "view my profile"
+      micropost: "micropost"
+  microposts:
+    micropost:
+      post: "Posted"
+      ago: "ago."
+      delete: "delete"
+      you_sure: You sure?
   user_mailer:
     account_activation:
       title: "Sample app"
@@ -134,3 +167,7 @@ your password will stay as it is."
         password_confirmation: "Confirmation"
       sessions:
         password: "Password"
+    models:
+      micropost:
+        valid_image: "must be a valid image format"
+        images_size: "should be less than 5MB"

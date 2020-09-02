@@ -1,7 +1,5 @@
 class PasswordResetsController < ApplicationController
-  before_action :get_user, only: %i(edit update)
-  before_action :valid_user, only: %i(edit update)
-  before_action :check_expiration, only: %i(edit update)
+  before_action :get_user, :valid_user, :check_expiration, only: %i(edit update)
 
   def new; end
 
@@ -45,7 +43,6 @@ class PasswordResetsController < ApplicationController
 
     flash[:danger] = t "global.not_found_user"
     redirect_to root_path
-
   end
 
   def valid_user
