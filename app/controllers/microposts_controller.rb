@@ -10,16 +10,14 @@ class MicropostsController < ApplicationController
 
   def destroy
     if @micropost.destroy
-      flash[:success] = t "global.micro_delete"
-      redirect_to request.referer || root_url
+      flash.now[:success] = t "global.micro_delete"
     else
       flash.now[:danger] = t "global.micro_delete_error"
-      redirect_to request.referer || root_url
     end
+    redirect_to request.referer || root_url
   end
 
   private
-
   def save_micro
     if @micropost.save
       flash[:success] = t "global.micro_create"

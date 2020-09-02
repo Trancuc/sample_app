@@ -3,6 +3,7 @@ class Micropost < ApplicationRecord
   has_one_attached :image
 
   scope :order_created_at, ->{order created_at: :desc}
+  scope :feed_micropost, ->(user_ids){where user_id: user_ids}
 
   validates :user_id, presence: true
   validates :content, presence: true,
@@ -11,7 +12,6 @@ class Micropost < ApplicationRecord
                                    message: I18n.t(".valid_image")},
                     size: {less_than: Settings.micropost.size.megabytes,
                            message: I18n.t(".images_size")}
-
   def display_image
     image.variant(resize_to_limit: [Settings.micropost.img_wh,
                                     Settings.micropost.img_wh])

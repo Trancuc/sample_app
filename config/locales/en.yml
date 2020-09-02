@@ -1,5 +1,10 @@
 en:
   global:
+    following: "Following"
+    follower: "Followers"
+    relationships_error: "error"
+    valid_image: "must be a valid image format"
+    images_size: "should be less than 5MB"
     micro_delete: "Micropost deleted"
     micro_delete_error: " Micropost delete error"
     micro_create: "Micropost created!"
@@ -92,6 +97,10 @@ en:
       text: "Contact the Ruby on Rails Tutorial about the sample app at the"
       path_text: "contact page"
   users:
+    follow:
+      follow_btn: "Follow"
+    unfollow:
+      unfollow_btn: "Unfollow"
     new:
       subtitle: "Sign up"
       submit: "Create my account"

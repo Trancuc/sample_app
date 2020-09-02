@@ -4,6 +4,14 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def find_user
+    @user = User.find_by id: params[:id]
+    return if @user
+
+    flash[:danger] = t "global.not_found_user"
+    redirect_to root_path
+  end
+
   def logged_in_user
     return if logged_in?
 

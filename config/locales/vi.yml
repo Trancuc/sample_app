@@ -1,5 +1,8 @@
 vi:
   global:
+    following: "Dang theo doi"
+    follower: "Nguoi theo doi"
+    relationships_error: "loi"
     micro_delete: "Xoa bai dang"
     micro_delete_error: "Chua xoa duoc bai dang"
     micro_create: "Tao bai dang"
@@ -93,6 +96,10 @@ vi:
       text: "Lien he ve Ruby on Rails Tutorial ve ung dung sample o"
       path_text: "Trang lien he"
   users:
+    follow:
+      follow_btn: "Theo doi"
+    unfollow:
+      unfollow_btn: "Huy theo doi"
     new:
       subtitle: "Dang ky"
       submit: "Tao tai khoan cua toi"
