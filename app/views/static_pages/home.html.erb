@@ -1,11 +1,11 @@
 <% provide :title, t(".subtitle") %>
 <div class = "center jumbotron" >
-  <h1><%= t ".text" %></h1>
+  <h1><%= t ".welcome" %></h1>
   <h2>
-    <%= t ".text1" %>
-    <%= link_to t(".path_text1"), Settings.home.path_link1 %>
-    <%= t ".text2" %>
+    <%= t ".home" %>
+    <%= link_to t(".tutorial"), Settings.home.path_link1 %>
+    <%= t ".app" %>
   </h2>
-  <%= link_to t(".path_text2"), signup_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to t(".sign_up"), signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 <%= link_to image_tag(Settings.home.path_link1, alt: "Rails logo", width: "200px"),"#" %>

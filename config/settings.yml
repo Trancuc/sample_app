@@ -24,3 +24,5 @@ user:
     pass_min: 6
 users_helper:
   size: 80
+sessions_controller:
+  status: 1
