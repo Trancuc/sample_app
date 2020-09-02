@@ -3,6 +3,10 @@ en:
     text_success: "Welcome to the Sample App!"
     text_error: "Signup unsuccessful!"
     not_found_user: "Not found user"
+    update_success: "Profile updated"
+    update_error: "Update failed"
+    user_delete: "User deleted"
+    please_login: "Please log in "
     log_in_false: "Invalid email/password combination"
   title: "Ruby on Rails Tutorial Sample App"
   layouts:
@@ -62,6 +66,16 @@ en:
     new:
       subtitle: "Sign up"
       submit: "Create my account"
+    user:
+      delete: "delete"
+      you_sure: "You sure ?"
+    edit:
+      subtitle: "Edit user"
+      title: "Update your profile"
+      change: "change"
+      save: "save"
+    index:
+      subtitle: "All user"
   sessions:
     new:
       title: "Log in"
