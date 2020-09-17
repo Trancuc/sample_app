@@ -4,14 +4,18 @@ class UsersController < ApplicationController
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
 
-  def show; end
+  def show
+    @microposts = @user.microposts.order_created_at.page(params[:page])
+                       .per Settings.users_controller.page
+  end
 
   def new
     @user = User.new
   end
 
   def index
-    @users = User.page(params[:page]).per Settings.users_controller.page
+    @users = User.activated.page(params[:page])
+                 .per Settings.users_controller.page
   end
 
   def create
@@ -48,14 +52,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit User::USER_PERMIT
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "global.please_login"
-    redirect_to login_url
   end
 
   def correct_user

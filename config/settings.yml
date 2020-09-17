@@ -32,3 +32,21 @@ users_helper:
   size: 80
 users_controller:
   page: 10
+microposts_controller:
+  page: 5
+static_pages:
+  page: 5
+micropost:
+  type: "image/jpeg image/gif image/png"
+  size: 5
+  maximum: 140
+  img_wh: 500
+micropost_form:
+  type: "image/jpeg, image/gif, image/png"
+  size_mega: 5
+  size: 1024
+user_info:
+  size: 50
+microposts:
+  micropost:
+    size_image: 50

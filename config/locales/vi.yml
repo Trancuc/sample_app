@@ -1,5 +1,8 @@
 vi:
   global:
+    micro_delete: "Xoa bai dang"
+    micro_delete_error: "Chua xoa duoc bai dang"
+    micro_create: "Tao bai dang"
     pass_expired: "Đặt lại mật khẩu đã hết hạn."
     pass_reset: "Mật khẩu đã được đặt lại."
     pass_empty: "không thể để trống"
@@ -20,7 +23,21 @@ vi:
     please_login: "Dang nhap ! "
     log_in_false: "Invalid email/password combination"
     message: "Tài khoản chưa được kích hoạt. Hãy kiểm tra email của bạn để biết liên kết kích hoạt."
-  title: "Ruby on Rails Tutorial Sample App"
+  mailers:
+    user_mailer:
+      account_activation: "Kich hoat tai khoan"
+      password_reset: "Dat lai mat khau"
+  helpers:
+    application_helper:
+      title: "Ruby on Rails Tutorial Sample App"
+  views:
+    title: "Ruby on Rails Tutorial Sample App"
+    pagination:
+      first: "&laquo; Dau"
+      last: "Cuoi &raquo;"
+      previous: "&lsaquo; Truoc"
+      next: "Tiep &rsaquo;"
+      truncate: "&hellip;"
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample App VN"
@@ -46,13 +63,13 @@ vi:
       sample_app: "Sample app"
   static_pages:
     home:
+      micro_feed: "Nguon bai dang"
       subtitle: "Trang chủ"
       sign_up: "Dang ky ngay !"
       tutorial: "Ruby on Rails Tutorial"
       welcome: "Chao mung den voi Sample App "
       home: "Đây là trang chủ của"
       app: "Ung dung Sample"
-
     help:
       subtitle: "Trợ giúp"
       help: "Trợ giúp Rails Tutorial"
@@ -90,6 +107,8 @@ vi:
       save: "Luu"
     index:
       subtitle: "All user"
+    show:
+       micro: "Bai dang"
   sessions:
     new:
       title: "Dang nhap"
@@ -103,6 +122,19 @@ vi:
     error_messages:
       text: "Bieu mau chua"
       error: "loi"
+    micropost_form:
+      compose_micropost: "Tao bai dang moi..."
+      post: "Dang"
+      alert: "Kích thước tệp tối đa là 5MB. Vui lòng chọn một tệp nhỏ hơn."
+    user_info:
+      view_pro: "Xem trnag ca nhan cua toi"
+      micropost: "bai dang"
+  microposts:
+    micropost:
+      post: "Da dang"
+      ago: "truoc"
+      delete: "xoa"
+      you_sure: Ban chac chan chu?
   user_mailer:
     account_activation:
       title: "Sample app"
@@ -127,9 +159,14 @@ vi:
       click: "Dat lai mat khau"
   mailer:
     account_activation: "kich hoat tai khoan"
+    password_reset: "Dat lai mat khau"
   activerecord:
     attributes:
       user:
         name: "Ten"
         password: "Mat khau"
         password_confirmation: "Xac nhan mat khau"
+    models:
+      micropost:
+        valid_image: "phải là một định dạng hình ảnh hợp lệ"
+        images_size: "phải nhỏ hơn 5MB"

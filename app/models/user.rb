@@ -1,20 +1,22 @@
 class User < ApplicationRecord
   USER_PERMIT = %i(name email password password_confirmation).freeze
   attr_accessor :remember_token, :activation_token, :reset_token
-
-  before_create :create_activation_digest
-  before_save :downcase_email
+  has_many :microposts, dependent: :destroy
 
   validates :name, presence: true,
     length: {maximum: Settings.user.validate.name_max}
   validates :email, presence: true,
     length: {maximum: Settings.user.validate.email_max},
     format: {with: URI::MailTo::EMAIL_REGEXP}, uniqueness: true
+  validates :password, presence: true,
+    length: {minimum: Settings.user.validate.pass_min}, allow_nil: true
 
   has_secure_password
 
-  validates :password, presence: true,
-    length: {minimum: Settings.user.validate.pass_min}, allow_nil: true
+  before_create :create_activation_digest
+  before_save :downcase_email
+
+  scope :activated, ->{where activated: true}
 
   class << self
     def digest string
@@ -66,6 +68,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < Settings.user.time_expired.hours.ago
+  end
+
+  def feed
+    microposts
   end
 
   private
